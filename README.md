@@ -5,13 +5,6 @@ A completely useless but highly entertaining **FNAF-themed pizza maker** built f
 Make cursed pizzas by stacking toppings, hit "Bake!", and get rewarded with terrible engineering/programmer jokes twisted with Five Nights at Freddy's lore.  
 Zero utility. Maximum Fazbear vibes. Pure chaos.
 
-## Screenshot / Demo
-*(Add a screenshot here later – e.g. pizza with toppings + a joke card popup)*
-
-Example joke you'll unlock:
-> "Why did the animatronic fail code review?  
-> Too many **springlocks** in the commit log!"
-
 ## Features
 - Build your pizza with 5 cursed toppings:
   - Pepperoni = Freddy's favorite
