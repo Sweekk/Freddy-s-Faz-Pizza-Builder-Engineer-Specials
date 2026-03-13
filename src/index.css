@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+
+@utility font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* CSS Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: #080005;
+}
+
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+  font-smoothing: none;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+}
+
+
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.15) 1px,
+    rgba(0, 0, 0, 0.15) 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* CRT flicker animation */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  animation: flicker 8s infinite;
+}
+
+@keyframes flicker {
+  0%, 95%, 100% { background: rgba(0, 0, 0, 0); }
+  96% { background: rgba(0, 0, 0, 0.08); }
+  97% { background: rgba(0, 0, 0, 0); }
+  98% { background: rgba(0, 0, 0, 0.05); }
+}
+
+/* CRT vignette */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.neon-text {
+  animation: neon-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  0% {
+    text-shadow:
+      0 0 7px #ffff00,
+      0 0 10px #ffff00,
+      0 0 21px #ffff00,
+      0 0 42px #ff8c00,
+      0 0 82px #ff8c00;
+  }
+  100% {
+    text-shadow:
+      0 0 4px #ffff00,
+      0 0 8px #ffff00,
+      0 0 15px #ffff00,
+      0 0 30px #ff8c00,
+      0 0 60px #ff8c00;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0005;
+}
+::-webkit-scrollbar-thumb {
+  background: #3d0066;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6600cc;
+}
+
+
+::selection {
+  background: #8b00ff44;
+  color: #cc44ff;
+}
+
+body {
+  cursor: default;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.pixel-blink {
+  animation: blink 1s step-end infinite;
+}
+
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(139, 0, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 0, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
