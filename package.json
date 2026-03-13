@@ -1,25 +1,36 @@
 {
-  "name": "freddys-faz-pizza-builder",
+  "name": "freddy-s-faz-pizza-builder-engineer-specials",
   "version": "1.0.0",
-  "description": "Freddy Fazbear's Faz-Pizza Builder – Engineer Specials. A completely useless but delightful FNAF-themed pizza toy.",
-  "main": "index.js",
-  "type": "module",
+  "description": "A completely useless but highly entertaining **FNAF-themed pizza maker** built for the coding club creative challenge.",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "framer-motion": "^12.36.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sweekk/Freddy-s-Faz-Pizza-Builder-Engineer-Specials.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sweekk/Freddy-s-Faz-Pizza-Builder-Engineer-Specials/issues"
+  },
+  "homepage": "https://github.com/Sweekk/Freddy-s-Faz-Pizza-Builder-Engineer-Specials#readme",
   "devDependencies": {
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/postcss": "^4.2.1",
     "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
     "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "framer-motion": "^12.36.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }

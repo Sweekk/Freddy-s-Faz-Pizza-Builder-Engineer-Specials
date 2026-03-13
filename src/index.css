@@ -1,10 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
-@utility font-pixel {
-  font-family: 'Press Start 2P', monospace;
+@layer utilities {
+  .font-pixel {
+    font-family: 'Press Start 2P', monospace;
+  }
 }
 
 /* CSS Reset & Base */
