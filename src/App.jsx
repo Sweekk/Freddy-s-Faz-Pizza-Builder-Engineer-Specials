@@ -76,13 +76,13 @@ export default function App() {
             />
           </motion.div>
 
-          {/* Center — pizza */}
+          {/* Center — pizza pushes above the CRT lines (zIndex: 50) */}
           <motion.div
-            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}
+            style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 0, overflow: 'hidden', zIndex: 50 }}
             initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
           >
-            <PizzaCanvas toppings={toppings} isBaking={isBaking} toppingCount={toppingCount} />
+            <PizzaCanvas toppings={toppings} isBaking={isBaking} toppingCount={toppingCount} bakeCount={bakeCount} />
           </motion.div>
 
           {/* Right — lore panel */}
